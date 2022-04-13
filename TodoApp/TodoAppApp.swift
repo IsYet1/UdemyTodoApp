@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CloudKit
 
 @main
 struct TodoAppApp: App {
+    
+    let coreDM = CoreDataManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, coreDM.viewContext)
         }
     }
 }

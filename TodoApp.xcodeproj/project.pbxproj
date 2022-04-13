@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D35DA632615461A00A05F8C /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D35DA622615461A00A05F8C /* NoteListScreen.swift */; };
+		8D56EB4F2616197800413395 /* Task+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D56EB4E2616197800413395 /* Task+Extensions.swift */; };
 		8D75778E261224040062ECB2 /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75778D261224040062ECB2 /* TodoAppApp.swift */; };
 		8D757790261224040062ECB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75778F261224040062ECB2 /* ContentView.swift */; };
 		8D757792261224050062ECB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D757791261224050062ECB2 /* Assets.xcassets */; };
 		8D757795261224050062ECB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D757794261224050062ECB2 /* Preview Assets.xcassets */; };
+		8D7577A02612243C0062ECB2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75779F2612243C0062ECB2 /* CoreDataManager.swift */; };
+		8D7577A5261224F10062ECB2 /* TodoAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D7577A3261224F10062ECB2 /* TodoAppModel.xcdatamodeld */; };
+		8D7577B9261235DD0062ECB2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7577B8261235DD0062ECB2 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D35DA622615461A00A05F8C /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
+		8D56EB4E2616197800413395 /* Task+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Extensions.swift"; sourceTree = "<group>"; };
 		8D75778A261224040062ECB2 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D75778D261224040062ECB2 /* TodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppApp.swift; sourceTree = "<group>"; };
 		8D75778F261224040062ECB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8D757791261224050062ECB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D757794261224050062ECB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D757796261224050062ECB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D75779F2612243C0062ECB2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8D7577A4261224F10062ECB2 /* TodoAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoAppModel.xcdatamodel; sourceTree = "<group>"; };
+		8D7577B5261235D90062ECB2 /* TodoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoApp.entitlements; sourceTree = "<group>"; };
+		8D7577B8261235DD0062ECB2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +38,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7577B9261235DD0062ECB2 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D56EB4D2616195E00413395 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D56EB4E2616197800413395 /* Task+Extensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D56EB5226161E4000413395 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D75778F261224040062ECB2 /* ContentView.swift */,
+				8D35DA622615461A00A05F8C /* NoteListScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8D757781261224040062ECB2 = {
 			isa = PBXGroup;
 			children = (
 				8D75778C261224040062ECB2 /* TodoApp */,
 				8D75778B261224040062ECB2 /* Products */,
+				8D7577B7261235DD0062ECB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +82,15 @@
 		8D75778C261224040062ECB2 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				8D56EB5226161E4000413395 /* Views */,
+				8D56EB4D2616195E00413395 /* Models */,
+				8D7577B5261235D90062ECB2 /* TodoApp.entitlements */,
+				8D75779E261224300062ECB2 /* Managers */,
 				8D75778D261224040062ECB2 /* TodoAppApp.swift */,
-				8D75778F261224040062ECB2 /* ContentView.swift */,
 				8D757791261224050062ECB2 /* Assets.xcassets */,
 				8D757796261224050062ECB2 /* Info.plist */,
 				8D757793261224050062ECB2 /* Preview Content */,
+				8D7577A3261224F10062ECB2 /* TodoAppModel.xcdatamodeld */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -67,6 +101,22 @@
 				8D757794261224050062ECB2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D75779E261224300062ECB2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8D75779F2612243C0062ECB2 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8D7577B7261235DD0062ECB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D7577B8261235DD0062ECB2 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D35DA632615461A00A05F8C /* NoteListScreen.swift in Sources */,
+				8D7577A02612243C0062ECB2 /* CoreDataManager.swift in Sources */,
+				8D7577A5261224F10062ECB2 /* TodoAppModel.xcdatamodeld in Sources */,
 				8D757790261224040062ECB2 /* ContentView.swift in Sources */,
+				8D56EB4F2616197800413395 /* Task+Extensions.swift in Sources */,
 				8D75778E261224040062ECB2 /* TodoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,9 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodoApp/TodoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = B2Q8EGNCQA;
+				DEVELOPMENT_TEAM = WM9Y6XVZYN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -277,7 +332,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.azamsharp.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isyet.udemy-todo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,9 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodoApp/TodoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = B2Q8EGNCQA;
+				DEVELOPMENT_TEAM = WM9Y6XVZYN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -299,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.azamsharp.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isyet.udemy-todo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D7577A3261224F10062ECB2 /* TodoAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D7577A4261224F10062ECB2 /* TodoAppModel.xcdatamodel */,
+			);
+			currentVersion = 8D7577A4261224F10062ECB2 /* TodoAppModel.xcdatamodel */;
+			path = TodoAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D757782261224040062ECB2 /* Project object */;
 }
