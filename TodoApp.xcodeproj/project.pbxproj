@@ -15,7 +15,7 @@
 		8D757795261224050062ECB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D757794261224050062ECB2 /* Preview Assets.xcassets */; };
 		8D7577A02612243C0062ECB2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75779F2612243C0062ECB2 /* CoreDataManager.swift */; };
 		8D7577A5261224F10062ECB2 /* TodoAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D7577A3261224F10062ECB2 /* TodoAppModel.xcdatamodeld */; };
-		8D7577B9261235DD0062ECB2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7577B8261235DD0062ECB2 /* CloudKit.framework */; };
+		A56E0EFA280B63AA00A21EB9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7577B8261235DD0062ECB2 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7577B9261235DD0062ECB2 /* CloudKit.framework in Frameworks */,
+				A56E0EFA280B63AA00A21EB9 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +332,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isyet.udemy-todo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isyet.udemytodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isyet.udemy-todo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isyet.udemytodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
